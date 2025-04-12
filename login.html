@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | Wings On Time</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #003366, #005f99);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url('https://cdn-icons-png.flaticon.com/512/3172/3172734.png');
+      background-repeat: no-repeat;
+      background-position: top 2rem center;
+      background-size: 80px;
+    }
+    .login-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      margin-top: 6rem;
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #005f99;
+    }
+    .btn-primary {
+      background-color: #005f99;
+      border-color: #005f99;
+    }
+    .btn-primary:hover {
+      background-color: #004c80;
+      border-color: #004c80;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <h3 class="text-center mb-4">Wings On Time Login</h3>
+    <form onsubmit="handleLogin(event)">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" required>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="remember">
+        <label class="form-check-label" for="remember">Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+      <div class="text-center mt-3">
+        <a href="#" class="text-decoration-none">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      // Redirect to the home page after login
+      window.location.href = "home.html";
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
